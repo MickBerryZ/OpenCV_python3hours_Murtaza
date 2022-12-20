@@ -9,8 +9,9 @@ print(imgResizeS.shape)
 imgResizeB = cv2.resize(img,(3000,2000))
 print(imgResizeB.shape)
 
-cv2.imshow("Image", img)
-cv2.imshow("ResizeS", imgResizeS)
-cv2.imshow("ResizeB", imgResizeB)
-
-cv2.waitKey(5000)
+while True:
+    cv2.imshow("Image", img)
+    cv2.imshow("ResizeS", imgResizeS)
+    cv2.imshow("ResizeB", imgResizeB)
+    if cv2.waitKey(5000) & 0xFF == ord('q'):
+        break

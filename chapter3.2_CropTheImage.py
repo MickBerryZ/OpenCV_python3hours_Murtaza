@@ -11,9 +11,11 @@ print(imgResizeB.shape)
 
 imgCropped = img[0:200, 200:500]
 
-cv2.imshow("Image", img)
-# cv2.imshow("ResizeS", imgResizeS)
-# cv2.imshow("ResizeB", imgResizeB)
-cv2.imshow("Image Cropped", imgCropped)
+while True:
 
-cv2.waitKey(5000)
+    cv2.imshow("Image", img)
+    # cv2.imshow("ResizeS", imgResizeS)
+    # cv2.imshow("ResizeB", imgResizeB)
+    cv2.imshow("Image Cropped", imgCropped)
+    if cv2.waitKey(5000) & 0xFF == ord('q'):
+        break

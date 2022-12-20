@@ -10,10 +10,13 @@ imgCanny = cv2.Canny(img,150,200)
 imgDialation = cv2.dilate(imgCanny,kernel,iterations=1)
 imgEroded = cv2.erode(imgDialation, kernel, iterations=1)
 
-cv2.imshow("Gray Image", imgGray)
-cv2.imshow("Blur Image", imgBlur)
-cv2.imshow("Canny Image", imgCanny)
-cv2.imshow("Dialation Image", imgDialation)
-cv2.imshow("Eroded Image", imgEroded)
-cv2.waitKey(7000)
+while True:
+    cv2.imshow("Gray Image", imgGray)
+    cv2.imshow("Blur Image", imgBlur)
+    cv2.imshow("Canny Image", imgCanny)
+    cv2.imshow("Dialation Image", imgDialation)
+    cv2.imshow("Eroded Image", imgEroded)
+    if cv2.waitKey(3) & 0xFF == ord('q'):
+        break
+    # cv2.waitKey(7000)
 
