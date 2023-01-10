@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 faceCascade = cv2.CascadeClassifier("Resources/cascades/data/haarcascade_frontalface_default.xml")
-img = cv2.imread('Resources/firmino.jpg')
+img = cv2.imread('Resources/nunez.jpg')
 imgGray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 faces = faceCascade.detectMultiScale(imgGray,1.1,4)
